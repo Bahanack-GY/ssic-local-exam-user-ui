@@ -1,4 +1,4 @@
-import {Routes, Route, Navigate} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import Login from './pages/Login'
 import ExamQuestions from './pages/ExamQuestions'
 import Results from './pages/Results'
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='h-screen w-full '>
      <Routes>
-        <Route path='/' element={<Navigate to="/login" replace />}/>
+        <Route path='/' element={<Login/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/:id' element={<ExamQuestions/>}/>
         <Route path='/results/:id' element={<Results/>}/>
